@@ -1,4 +1,4 @@
 @Library('roboshop') _
 
-env.component="catalogue"
+env.component="shipping"
 maven()

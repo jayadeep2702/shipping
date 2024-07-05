@@ -2,5 +2,6 @@ FROM        amazoncorretto:17
 RUN         mkdir /app
 WORKDIR     /app
 COPY        shipping.jar .
-ENTRYPOINT  [ "/bin/java", "-XX:InitialRAMPercentage=70", "-XX:MaxRAMPercentage=80",  "/app/shipping.jar" ]
+COPY        run.sh .
+ENTRYPOINT  ["bash", "/run.sh"]
 
